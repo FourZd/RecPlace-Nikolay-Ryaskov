@@ -1,0 +1,29 @@
+services:
+  recplace_backend:
+    container_name: recplace_backend
+    build:
+      context: ../
+      dockerfile: dev_tools/Dockerfile
+    restart: always
+    depends_on:
+      - recplace_db
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../:/app
+    env_file:
+     - .env
+
+  recplace_db:
+    container_name: recplace_db
+    image: postgres:alpine
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_recplace_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_recplace_data:

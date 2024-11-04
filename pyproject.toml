@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "recplace"
+version = "0.1.0"
+description = "Test project for recplace"
+authors = ["FourZd <shogo.ryaskov@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.4"
+sqlalchemy = "^2.0.36"
+asyncio = "^3.4.3"
+aiohttp = "^3.10.10"
+pyjwt = "^2.9.0"
+dependency-injector = "^4.43.0"
+uvicorn = "^0.32.0"
+pydantic-settings = "^2.6.1"
+alembic = "^1.13.3"
+psycopg2-binary = "^2.9.10"
+asyncpg = "^0.30.0"
+bcrypt = "^4.2.0"
+aiocache = "^0.12.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
